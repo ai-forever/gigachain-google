@@ -1,19 +1,23 @@
 [tool.poetry]
-name = "langchain-google-community"
+name = "gigachain-google-community"
 version = "2.0.0"
 description = "An integration package connecting miscellaneous Google's products and LangChain"
 authors = []
 readme = "README.md"
 repository = "https://github.com/langchain-ai/langchain-google"
 license = "MIT"
+packages = [
+    {include = "langchain_google_community"},
+]
+
 
 [tool.poetry.urls]
 "Source Code" = "https://github.com/langchain-ai/langchain-google/tree/main/libs/community"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
-langchain-core = ">=0.3.0,<0.4"
-langchain-community = "^0.3.0"
+gigachain-core = ">=0.2.38post2,<0.4"
+gigachain-community = ">=0.2.16post2"
 google-api-core = "^2.17.1"
 google-api-python-client = "^2.122.0"
 google-cloud-core = "^2.4.1"

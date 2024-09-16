@@ -1,18 +1,21 @@
 [tool.poetry]
-name = "langchain-google-vertexai"
+name = "gigachain-google-vertexai"
 version = "2.0.0"
-description = "An integration package connecting Google VertexAI and LangChain"
+description = "An integration package connecting Google VertexAI and GigaChain"
 authors = []
 readme = "README.md"
 repository = "https://github.com/langchain-ai/langchain-google"
 license = "MIT"
+packages = [
+    {include = "langchain_google_vertexai"},
+]
 
 [tool.poetry.urls]
 "Source Code" = "https://github.com/langchain-ai/langchain-google/tree/main/libs/vertexai"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
-langchain-core = ">=0.3.0,<0.4"
+gigachain-core = ">=0.2.38post2,<0.4"
 google-cloud-aiplatform = "^1.56.0"
 google-cloud-storage = "^2.17.0"
 # optional dependencies
@@ -40,9 +43,9 @@ numpy = [
   { version = "^1.26.0", python = ">=3.12" },
 ]
 google-api-python-client = "^2.117.0"
-langchain = { git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/langchain" }
-langchain-core = { git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/core" }
-langchain-standard-tests = {git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/standard-tests"}
+gigachain = { git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/langchain" }
+gigachain-core = { git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/core" }
+gigachain-standard-tests = {git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/standard-tests"}
 
 
 [tool.codespell]
@@ -59,7 +62,7 @@ codespell = "^2.2.0"
 
 [tool.poetry.extras]
 anthropic = ["anthropic"]
-mistral = ["langchain-mistralai"]
+mistral = ["gigachain-mistralai"]
 
 
 [tool.poetry.group.test_integration]
@@ -69,8 +72,8 @@ optional = true
 numexpr = { version = "^2.8.8", python = ">=3.9,<4.0" }
 google-api-python-client = "^2.114.0"
 google-cloud-datastore = "^2.19.0"
-langchain = { git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/langchain" }
-langchain-mistralai = { git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/partners/mistralai"}
+gigachain = { git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/langchain" }
+gigachain-mistralai = { git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/partners/mistralai"}
 
 [tool.poetry.group.lint]
 optional = true
@@ -84,12 +87,12 @@ mypy = "^1"
 types-google-cloud-ndb = "^2.2.0.20240106"
 types-protobuf = "^4.24.0.4"
 types-requests = "^2.31.0"
-langchain-core = { git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/core" }
+gigachain-core = { git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/core" }
 
 
 
 [tool.poetry.group.dev.dependencies]
-langchain-core = { git = "https://github.com/langchain-ai/langchain.git", subdirectory = "libs/core" }
+gigachain-core = { git = "https://github.com/ai-forever/gigachain.git", subdirectory = "libs/core" }
 
 [tool.ruff.lint]
 select = [
